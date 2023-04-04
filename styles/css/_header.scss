@@ -1,0 +1,43 @@
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+        
+    .logo{
+            position: relative;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 2em;
+        }
+        
+        .nav{
+            position: relative;
+            display: flex;
+            gap: 40px;
+
+            li{
+                list-style: none;
+
+                a{
+                    text-decoration: none;
+                    color: #fff;
+                    font-weight: 500;
+                    font-style: 1.25em;
+                }
+
+            }
+
+        }
+}
+
+header ul li.active a,
+header ul li:hover a{
+    color: #30fe6c;
+}
