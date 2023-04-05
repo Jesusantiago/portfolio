@@ -1,10 +1,92 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
 
-@import "header", "home";
+@import 
+"../SASS/header",
+"../SASS/home",
+"../SASS/services",
+"../SASS/portafolio",
+"../SASS/contact";
+
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Open Sans", sans-serif;
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 900px){
+
+    header{
+        padding: 20px 30px;
+    }
+
+    .header ul{
+        display: none;
+    }
+
+    header.active ul{
+        position: fixed;
+        left: 0;
+        top: 83px;
+        width: 100%;
+        height: calc(100vh - 83px);
+        background: rgba(50, 50, 50, 0.95);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        z-index: 10000;
+        gap: 20px;
+        color: #fff;
+
+        a{
+            font-size: 2em;
+        }
+    }
+
+    
+
+  
+    
+        .menuToggle{
+            position: relative;
+            width: 30px;
+            height: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            // background: #f00;
+    
+            &::before{
+                @include pseudoBurger(-10);
+                box-shadow: 0 10px #fff;
+            }
+    
+            &::after{
+                @include pseudoBurger(20px);
+            }
+        }
+    
+            header.active .menuToggle::before{
+                transform: translateY(0) rotate(45deg);
+                box-shadow: 0 0 #fff;
+    
+        }
+        header.active .menuToggle::after{
+            transform: translateY(0) rotate(315deg);
+            box-shadow: 0 0 #fff;
+        }
+
+        
+
+    
+
+}
+
+@media (max-width: 700px){
+
+    
 }

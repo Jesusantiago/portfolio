@@ -1,3 +1,13 @@
+@mixin pseudoBurger($tras){
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transform: translateY($tras);
+    transition: 0.5s;
+}
+
 header{
     position: fixed;
     top: 0;
@@ -8,6 +18,7 @@ header{
     justify-content: space-between;
     align-items: center;
     z-index: 10000;
+    backdrop-filter: blur(20px);
         
     .logo{
             position: relative;
@@ -29,7 +40,7 @@ header{
                     text-decoration: none;
                     color: #fff;
                     font-weight: 500;
-                    font-style: 1.25em;
+                    font-size: 1.25em;
                 }
 
             }
@@ -40,4 +51,34 @@ header{
 header ul li.active a,
 header ul li:hover a{
     color: #30fe6c;
+}
+
+/* Media */
+
+@media (max-width:900px){
+    header{
+        padding: 20px 50px;
+    }
+
+
+
+    .menuToggle{
+        position: relative;
+        width: 30px;
+        height: 20px;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        cursor: pointer;
+        // background: #f00;
+
+        &::before{
+            @include pseudoBurger(-10);
+            box-shadow: 0 10px #fff;
+        }
+
+        &::after{
+            @include pseudoBurger(20px);
+        }
+    }
 }

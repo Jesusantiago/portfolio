@@ -1,0 +1,113 @@
+.services,
+.portafolio,
+.contact{
+    position: relative;
+    background: #34353a;
+    min-height: 100vh;
+    padding: 120px 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.secText{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h2{
+        font-size: 3em;
+        color: #fff;
+
+    }
+    p{
+        max-width: 700px;
+        text-align: center;
+        color: #aaa;
+        font-size: 1.1em;
+        line-height: 1.5em;
+    }
+}
+
+.services .content{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+    margin: 40px 0;
+}
+
+.servicesBox{
+    background: #2e2f34;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    border: 2px solid #2e2f34;
+
+    &:hover{
+        border: 2px solid #30fe6c;
+    }
+}
+
+.servicesBox img{
+    max-width: 100px;
+    filter: invert(1);
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+.servicesBox:hover{
+    img{
+        opacity: 1;
+    }
+}
+
+.servicesBox{
+    h3{
+        color: #fff;
+        font-weight: 500;
+        color: #30fe6c;
+    }
+}
+
+.center{
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width: 900px){
+
+    .services,
+    .portafolio,
+    .contact{
+        padding: 100px 50px 50px;
+
+    }    
+    .secText{
+        h2{
+            font-size: 2em;
+            text-align: center;
+        }
+    }
+
+    .services .content,
+    .portafolio .content,
+    .contact .content{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    
+}
+
+@media (max-width: 700px){
+    .services .content,
+    .portafolio .content,
+    .contact .content{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
