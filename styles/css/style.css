@@ -3,7 +3,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   padding: 20px 100px;
   display: flex;
   justify-content: space-between;
@@ -118,9 +118,8 @@ header ul li:hover a {
 .home .men {
   position: absolute;
   bottom: 0;
-  right: 100px;
+  right: 350px;
   max-height: 90vh;
-  scale: 1.5;
 }
 
 .btn {
