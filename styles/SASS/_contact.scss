@@ -52,7 +52,12 @@ a:hover .fi{
 
 @media (max-width: 700px){
 
-    .contact .content a{
-        height: 80px;
+    .contact .content {
+
+        grid-template-columns: repeat(2, 1fr);
+        
+        a{
+            height: 80px;
+        }
     }
-}
+    }

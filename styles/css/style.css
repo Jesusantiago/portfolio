@@ -289,39 +289,19 @@ header ul li:hover a {
 .imgBox {
   position: relative;
   max-width: 400px;
-  margin-left: auto;
-  margin-right: auto;
 }
-.imgBox a img {
-  max-width: 100%;
-  display: inline-flex;
-}
-.imgBox:nth-child(2) {
-  display: flex;
-  align-items: center;
-  background-color: #2e2f34;
-}
-.imgBox:nth-child(3) {
-  display: flex;
-  align-items: center;
-  background-color: #2e2f34;
-}
-.imgBox:nth-child(4) {
-  display: flex;
-  align-items: center;
-  background-color: #2e2f34;
-}
-.imgBox:nth-child(5) {
-  display: flex;
-  align-items: center;
-  background-color: #2e2f34;
-}
-.imgBox:nth-child(9) {
-  display: flex;
-  align-items: center;
-  background-color: #2e2f34;
+.imgBox img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
+@media (max-width: 700px) {
+  .portafolio .content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 .contact .content {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -367,6 +347,9 @@ a:hover .fi {
 }
 
 @media (max-width: 700px) {
+  .contact .content {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .contact .content a {
     height: 80px;
   }
