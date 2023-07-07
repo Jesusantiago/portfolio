@@ -11,19 +11,5 @@ let burger = document.querySelector(".menuToggle");
 let header = document.querySelector(".header");
 
 burger.onclick = function(){
-    header.classList.toggle("active")
-    
+    header.classList.toggle("active")   
 }
-
-// const cv = document.getElementById("btncv")
-
-// cv.addEventListener("click", (e)=>{
-//     e.preventDefault();
-//     console.log("hola")
-//     fetch("./styles/access/CV.pdf")
-//     .then(res=>res.blob())
-//     // .then(res=>{
-//     //     cv.href =  URL.createObjectURL(res)
-//     // })
-    
-// })

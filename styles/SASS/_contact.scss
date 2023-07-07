@@ -29,12 +29,13 @@
 
     }
     }
+    a:hover,
+    a:hover .fi
+    {
+        color: #30fe6c;
+    }
 }
 
-a:hover,
-a:hover .fi{
-    color: #222;
-}
 
 .autor{
     margin-top: 150px;
@@ -60,4 +61,8 @@ a:hover .fi{
             height: 80px;
         }
     }
+
+    .autor{
+        font-size: 0.8em;
     }
+}

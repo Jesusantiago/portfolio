@@ -13,7 +13,7 @@ header{
     top: 0;
     left: 0;
     width: 100vw;
-    padding: 20px 100px;
+    padding: 2vh 3vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,17 +21,21 @@ header{
     backdrop-filter: blur(20px);
         
     .logo{
-            position: relative;
-            color: #fff;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 2em;
+        position: relative;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 700;
+        font-size:  clamp(1rem, 5vw, 2rem);
+        
+        &:hover{
+            color: #30fe6c;
         }
+    }
         
         .nav{
             position: relative;
             display: flex;
-            gap: 40px;
+            gap: 38px;
 
             li{
                 list-style: none;
@@ -46,6 +50,7 @@ header{
             }
 
         }
+
 }
 
 header ul li.active a,
@@ -57,28 +62,58 @@ header ul li:hover a{
 
 @media (max-width:900px){
     header{
-        padding: 20px 50px;
+        padding: 20px 30px;
+    
+        .nav{
+            display: none;
+        }
     }
 
+    header.active ul{
+        position: fixed;
+        left: 0;
+        top: 79px;
+        width: 100%;
+        height: 100vh;
+        padding-top: 1.5svh;
+        background: rgba(50, 50, 50, 0.95);
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+        z-index: 10000;
+        gap: 40px;
+        color: #fff;
+        
 
+        a{
+            font-size: 2em;
+        }
+    }
+
+    header.active .menuToggle::before{
+        transform: translateY(20px) rotate(45deg);
+        box-shadow: 0 0 #fff;
+    
+    }
+    header.active .menuToggle::after{
+        transform: translateY(20px) rotate(315deg);
+        box-shadow: 0 0 #fff;
+    }
 
     .menuToggle{
         position: relative;
-        width: 30px;
-        height: 20px;
-        display: flex;
-        justify-content: end;
-        align-items: center;
+        width: 39px;
+        height: 39px;
         cursor: pointer;
 
-
         &::before{
-            @include pseudoBurger(-10);
+            @include pseudoBurger(10px);
             box-shadow: 0 10px #fff;
         }
 
         &::after{
-            @include pseudoBurger(20px);
+            @include pseudoBurger(30px);
         }
     }
 }
