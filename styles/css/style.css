@@ -128,7 +128,7 @@ header ul li:hover a {
   font-size: clamp(0.85rem, 4vw, 1.3rem);
   line-height: 1.6em;
 }
-.home box-icon {
+.home .btnResponsive {
   display: none;
 }
 
@@ -138,7 +138,7 @@ header ul li:hover a {
   bottom: 0;
   right: max(10px, 5vw);
   min-width: 330px;
-  width: 80vw;
+  width: 60vw;
   max-width: 670px;
   height: 40vw;
   max-height: 350px;
@@ -150,7 +150,7 @@ header ul li:hover a {
 .home .men {
   position: absolute;
   min-width: 300px;
-  width: 70vw;
+  width: 50vw;
   max-width: 600px;
   right: 6.5vw;
   bottom: 0;
@@ -179,23 +179,17 @@ header ul li:hover a {
   }
   .home .btn {
     display: none;
-    max-width: 160px;
-    padding: 10px 20px;
   }
-  .home box-icon {
+  .home .btnResponsive {
     margin-left: 20px;
-    display: inline;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
   }
 }
 @media (max-width: 600px) {
   .home .content {
     width: 100%;
-  }
-  .btn {
-    max-width: 150px;
-    padding: 10px 20px;
-    font-weight: 500;
-    letter-spacing: 0.02em;
   }
 }
 .services,
