@@ -1,3 +1,7 @@
+*{
+    overflow-y: hidden;
+}
+
 .home{
     position: relative;
     width: 100%;
@@ -52,8 +56,7 @@
     width: 50vw;
     max-width: 600px;
     right: 7vw;
-    bottom: -6
-    vw;
+    bottom: -6vw;
 }
 
 .btn{
@@ -100,4 +103,29 @@
     .home .content{
         width: 100%;
     }
+
+    .home::before{
+        content: "";
+        position: absolute;
+        bottom: -10;
+        right: max(10px, 5vw);
+        min-width: 330px;
+        width: 60vw;
+        max-width: 670px;
+        height: 40vw;
+        max-height: 350px;
+        background-color: #30fe6c;
+        border-top-right-radius: 50vw;
+        border-top-left-radius: 50vw;
+    }
+
+    
+    .home{
+        .men{
+            position: absolute;
+            right: 10vw;
+            bottom: -16vw;
+        }
+    }
+
 }
