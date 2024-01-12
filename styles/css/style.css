@@ -103,10 +103,6 @@ header ul li:hover a {
     transition: 0.5s;
   }
 }
-* {
-  overflow-y: hidden;
-}
-
 .home {
   position: relative;
   width: 100%;
