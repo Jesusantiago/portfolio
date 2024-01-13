@@ -426,14 +426,14 @@ header ul li:hover a {
   }
   .item-grap {
     padding-right: 2.5vw;
-    width: 40%;
+    width: 30%;
     display: flex;
     align-items: center;
     justify-content: end;
-    gap: 50px;
+    gap: 5px;
   }
   .item-text {
-    width: 80%;
+    width: 70%;
     text-align: left;
   }
   .item-text p {
@@ -446,17 +446,21 @@ header ul li:hover a {
     text-align: left;
   }
   .item-text .subtitle {
-    padding-left: 50px;
+    padding-left: 15px;
     display: flex;
     align-items: center;
+    position: relative;
   }
   .item-text .subtitle::before {
     content: "";
+    position: absolute;
+    top: 7px;
+    left: 7px;
     background-color: #30fe6c;
     display: block;
-    width: 8px;
-    height: 8px;
-    margin-right: 10px;
+    width: 5px;
+    height: 5px;
+    margin-right: 5px;
     border-radius: 50%;
   }
   .item-text .subtitle span {
@@ -470,7 +474,8 @@ header ul li:hover a {
   }
   .item-text .mes span {
     position: absolute;
-    right: -13.5vw;
+    right: -8vw;
+    color: #30fe6c;
   }
 }
 .portafolio {
